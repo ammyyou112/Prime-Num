@@ -2,26 +2,26 @@
 def prime_sum():
 
     #getting the input from user in list
-    num = [int(x) for x in input('Enter a list of nums: ').split()]
+    nums = [int(x) for x in input('Enter a list of nums: ').split()]
 
     #Variable for define the sum
     sum = 0
 
-    for n in num:
-        if n > 1:
+    for num in nums:
+        if num > 1:
             #iterate starting from 2 to n value
-            for i in range(2, n):
+            for i in range(2, num):
                 #condition to check prime num
-                if n % i == 0:
-                    print(n,'is not prime')
+                if num % i == 0:
+                    print(num,'is not prime')
                     break
             #prime num and its sum
             else:
-                print(n,'Prime')
-                sum = sum + n
+                print(num,'Prime')
+                sum = sum + num
 #print result
         else:
-            print(n,'is not prime')
+            print(num,'is not prime')
 
     print('Sum of the Prime Num',sum)
 
